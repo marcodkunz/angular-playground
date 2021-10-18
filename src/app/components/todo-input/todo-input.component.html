@@ -1,0 +1,13 @@
+<form class="input-area">
+  <table>
+    <tr>
+      <td>Name:</td>
+      <td><input id="name" type="text" [(ngModel)]="name" name="TodoNameInput"></td>
+    </tr>
+    <tr>
+      <td>Todo:</td>
+      <td><input id="todo" type="text" [(ngModel)]="value" name="TodoValueInput"></td>
+    </tr>
+  </table>
+  <button class="submit" (click)="addTodo()">Submit</button>
+</form>

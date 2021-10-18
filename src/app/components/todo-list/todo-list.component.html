@@ -1,0 +1,7 @@
+<h1>Erfasste TODOs</h1>
+<ul>
+  <li *ngFor="let todo of todoList; let i = index">
+    {{todo.name}}: {{todo.todo}}
+    <button (click)="deleteTodo(i)">X</button>
+  </li>
+</ul>
