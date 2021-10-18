@@ -5,7 +5,7 @@ import {AppComponent} from './components/root/app.component';
 import {TodoInputComponent} from './components/todo-input/todo-input.component';
 import {TodoListComponent} from './components/todo-list/todo-list.component';
 import {FormsModule} from "@angular/forms";
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule, NgbNavModule} from '@ng-bootstrap/ng-bootstrap';
 import {ParentComponentComponent} from './components/parent-component/parent-component.component';
 import {ChildComponentComponent} from './components/child-component/child-component.component';
 import {AnimalsComponent} from './components/animals/animals.component';
@@ -29,6 +29,7 @@ import { JokeComponent } from './components/joke/joke.component';
     FormsModule,
     NgbModule,
     HttpClientModule,
+    NgbNavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

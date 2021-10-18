@@ -7,7 +7,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
 })
 export class ChildComponentComponent {
 
-  @Output() onTextUpdate = new EventEmitter<string>();
+  @Output() TextUpdate = new EventEmitter<string>();
 
   text: string = '';
 
@@ -15,7 +15,7 @@ export class ChildComponentComponent {
   }
 
   submit(): void {
-    this.onTextUpdate.emit(this.text);
+    this.TextUpdate.emit(this.text);
 
     this.text = '';
   }
