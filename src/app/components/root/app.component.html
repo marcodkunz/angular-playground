@@ -1,0 +1,38 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+  <li [ngbNavItem]="1">
+    <a ngbNavLink>Todos</a>
+    <ng-template ngbNavContent>
+      <h1>TODO Liste</h1>
+      <p>Dies ist eine TODO Liste. Trage Name und Tätigkeit ein.</p>
+
+      <app-todo-input [todoList]="todoList" (updateTodoList)="updateTodos($event)"></app-todo-input>
+
+      <app-todo-list [todoList]="todoList"></app-todo-list>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <a ngbNavLink>Custom Text</a>
+    <ng-template ngbNavContent>
+      <div class="container">
+        <div class="align-content-center align-self-center">
+          <h1>Here comes the text</h1>
+          <app-parent-component></app-parent-component>
+        </div>
+      </div>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="3">
+    <a ngbNavLink>Animals</a>
+    <ng-template ngbNavContent>
+      <app-animals></app-animals>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="4">
+    <a ngbNavLink>Jokes</a>
+    <ng-template ngbNavContent>
+      <app-joke></app-joke>
+    </ng-template>
+  </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>

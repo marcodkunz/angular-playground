@@ -1,0 +1,21 @@
+<h2>Animals</h2>
+
+
+<div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="selected">
+  <label ngbButtonLabel class="btn-primary">
+    <input ngbButton type="radio" [value]="null"> All
+  </label>
+  <label ngbButtonLabel class="btn-primary">
+    <input ngbButton type="radio" [value]="0"> Bird
+  </label>
+  <label ngbButtonLabel class="btn-primary">
+    <input ngbButton type="radio" [value]="1"> Reptile
+  </label>
+  <label ngbButtonLabel class="btn-primary">
+    <input ngbButton type="radio" [value]="2"> Mammal
+  </label>
+</div>
+
+<ul>
+  <li *ngFor="let animal of animals | animals:selected">{{animal.name}}</li>
+</ul>
